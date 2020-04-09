@@ -1,27 +1,25 @@
 <template>
-  <div class="index-page">
-    <Shujia v-show="theme.tabIndex===0" />
-
-
-    <Bottom />
+  <div style="min-width:1340px">
+    <pcHeader type="fixed" />
+    <page1 />
   </div>
 </template>
 
 
 <script>
 import { mapState } from "vuex";
-import Bottom from "./components/bottom.vue";
-import Shujia from "./shujia.vue";
+import pcHeader from "./components/pc/pcHeader.vue";
+import page1 from "././components/pc/page1.vue";
 
 export default {
-  name: "index",
+  name: "PcIndex",
   data() {
     return {};
   },
   props: {},
   components: {
-    Shujia,
-    Bottom
+    pcHeader,
+    page1
   },
   mounted() {},
   created() {},
@@ -35,7 +33,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.index-page {
-  padding-bottom: 128px;
-}
+
 </style>

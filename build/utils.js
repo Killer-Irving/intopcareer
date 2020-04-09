@@ -29,7 +29,8 @@ exports.cssLoaders = function (options) {
   const px2remLoader = {
     loader: 'px2rem-loader',
     options: {
-      remUnit: 75  //设计稿的1/10 ，我们假设设计稿是750px
+      remUnit: 65,//设计图的宽度/10 比如你的设计图是1920的宽度 这里你就1920/10=192
+      remPrecision: 8//换算的rem保留几位小数点
     }
   }
 

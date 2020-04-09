@@ -2,6 +2,9 @@
 
 module.exports = {
   
+  /**
+   * demo
+   */
   aaa(b = 3) {
     console.log(b);
   }

@@ -1,10 +1,10 @@
-const Index = () => import('./index.vue');
+const PcIndex = () => import('./pc_index.vue');
 
 export const theme = [
   {
     path: '/',
-    name: 'index',
-    component: Index
+    name: 'pc_index',
+    component: PcIndex
   },
 ];
 
