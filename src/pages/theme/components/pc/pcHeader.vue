@@ -4,10 +4,11 @@
     <div class="f">
       <div v-for="(item,index) in entry" :key="index">
         <span
-          @click="()=>{activeValue=item.value}"
+          @click="setActiveIndex(item.value)"
           :class="[
               'title-item',
               activeValue === item.value&&item.value!=='1' ? 'title-item-active' : '' ,
+              activeValue === item.value&&item.value==='1' ? 'title-item-active-page1' : '' ,
             ]"
         >{{item.title}}</span>
       </div>
@@ -18,7 +19,7 @@
 
 <script>
 export default {
-  name: "index",
+  name: "pcHeader",
   data() {
     return {
       entry: [
@@ -32,18 +33,18 @@ export default {
       activeValue: "1"
     };
   },
-  props: {
-    type: {
-      type: String,
-      defualt: ""
-    }
-  },
+  props: {},
   components: {},
   mounted() {},
   created() {},
   computed: {},
   watch: {},
-  methods: {}
+  methods: {
+    setActiveIndex(index) {
+      this.activeValue = index;
+      this.$emit("getActiveIndex", index);
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -53,10 +54,19 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 368px 0 370px;
+  z-index: 3;
+  background: white;
+}
+.pc-tab-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .logo-img {
-  width: 178px;
-  height: 50px;
+  width: 244px;
+  height: 80px;
+  margin-top: -10px;
 }
 .title-item {
   cursor: pointer;
@@ -66,6 +76,12 @@ export default {
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: rgba(51, 51, 51, 1);
+}
+.title-item-active-page1 {
+  font-weight: 600;
+  padding-bottom: 8px;
+  color: white;
+  border-bottom: 2px solid white;
 }
 .title-item-active {
   font-weight: 600;
