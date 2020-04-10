@@ -1,6 +1,6 @@
 <template>
   <div style="min-width:1340px">
-    <pcHeader type="fixed" />
+    <pcHeader />
     <page1 />
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 import { mapState } from "vuex";
 import pcHeader from "./components/pc/pcHeader.vue";
-import page1 from "././components/pc/page1.vue";
+import page1 from "./components/pc/page1.vue";
 
 export default {
   name: "PcIndex",
@@ -33,5 +33,4 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
 </style>
