@@ -26,7 +26,8 @@ export default {
   components: {
     pcHeader,
     pcBottom,
-    page1
+    page1,
+    page2
   },
   mounted() {},
   created() {},
