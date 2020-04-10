@@ -36,12 +36,15 @@ export default {
   props: {},
   components: {},
   mounted() {},
-  created() {},
+  created() {
+    this.setActiveIndex(sessionStorage.getItem("activeIndex") || "1");
+  },
   computed: {},
   watch: {},
   methods: {
     setActiveIndex(index) {
       this.activeValue = index;
+      sessionStorage.setItem("activeIndex", index);
       this.$emit("getActiveIndex", index);
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div style="min-width:1340px">
-    <pcHeader @getActiveIndex="(e)=>{activeIndex=e}" />
+    <pcHeader @getActiveIndex="setActiveItem" />
     <page1 v-if="activeIndex==='1'" />
     <page2 v-if="activeIndex==='2'" />
     <pcBottom />
@@ -37,7 +37,11 @@ export default {
     })
   },
   watch: {},
-  methods: {}
+  methods: {
+    setActiveItem(e) {
+      this.activeIndex = e;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
