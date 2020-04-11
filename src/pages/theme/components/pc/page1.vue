@@ -26,6 +26,8 @@
       <span class="text2">提前布局，两手准备，做好过程管理，个性化赋能，提升核心竞争力，实现学业职业理想。</span>
       <div class="icon-line">
         <div
+          @mouseenter="p2Mouseenter($event,item.text)"
+          @mouseleave="part2ActiveText=''"
           @click="()=>{part2ActiveText=item.text}"
           v-for="item in part2Arr"
           :key="item.text"
@@ -54,6 +56,8 @@
       <span class="text1">部分学徒OFFER展示</span>
       <div class="icon-line">
         <div
+          @mouseenter="p6Mouseenter($event,item.title)"
+          @mouseleave="part6ActiveText=''"
           @click="()=>{part6ActiveText=item.title}"
           :class="[
         'icon-item',
@@ -77,6 +81,8 @@
       <span class="text1">盈途教育足迹</span>
       <div class="icon-line">
         <div
+          @mouseenter="p8Mouseenter($event,item.title)"
+          @mouseleave="part8ActiveTitle=''"
           @click="()=>{part8ActiveTitle=item.title}"
           :class="[
         'icon-item',
@@ -184,7 +190,17 @@ export default {
   created() {},
   computed: {},
   watch: {},
-  methods: {}
+  methods: {
+    p2Mouseenter(e, text) {
+      this.part2ActiveText = text;
+    },
+    p6Mouseenter(e, title) {
+      this.part6ActiveText = title;
+    },
+    p8Mouseenter(e, title) {
+      this.part8ActiveTitle = title;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

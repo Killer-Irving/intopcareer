@@ -35,10 +35,22 @@
     <div class="part3">
       <span class="text1">双轨计划优势</span>
       <div class="icon-line">
-        <div v-for="item in part3Arr" :key="item.title" class="icon-item">
-          <img :src="item.img" class="icon" />
-          <span class="text3">{{item.title}}</span>
-          <div class="bottom-line"></div>
+        <div
+          v-for="item in part3Arr"
+          :key="item.title"
+          class="icon-item"
+          @mouseenter="p3Mouseenter($event,item.title)"
+          @mouseleave="part3ActiveTitle=''"
+        >
+          <div class="icon-fake-bg" v-if="part3ActiveTitle===item.title">
+            <span class="icon-fake-bg-text1">{{item.title}}</span>
+            <div class="icon-fake-bg-line"></div>
+            <span class="icon-fake-bg-text2">{{item.text}}</span>
+          </div>
+
+          <img :src="item.img" class="icon" v-if="part3ActiveTitle!==item.title"/>
+          <span class="text3" v-if="part3ActiveTitle!==item.title">{{item.title}}</span>
+          <div class="bottom-line" v-if="part3ActiveTitle!==item.title"></div>
         </div>
       </div>
     </div>
@@ -110,7 +122,14 @@
         <div class="title-line"></div>
       </div>
       <div class="one">
-        <div v-for="item in part8Arr_one" :key="item.title" class="item-one">
+        <div
+          v-for="(item,index) in part8Arr_one"
+          :key="item.title"
+          :class="[
+          'item-one',
+          index<4?'h500':'h436'
+          ] "
+        >
           <div class="item-one-top">
             <img :src="item.img" class="item-one-top-img" />
             <span class="item-one-top-title">{{item.title}}</span>
@@ -322,6 +341,7 @@ export default {
           img: p35
         }
       ],
+      part3ActiveTitle: "",
       part4Arr: [
         {
           text: "没有清晰的自我认知，没有明确目标的大一、大二学生",
@@ -585,7 +605,11 @@ export default {
   created() {},
   computed: {},
   watch: {},
-  methods: {}
+  methods: {
+    p3Mouseenter(e, title) {
+      this.part3ActiveTitle = title;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -744,11 +768,52 @@ export default {
     color: rgba(51, 51, 51, 1);
   }
   .icon-line {
+    position: relative;
     display: flex;
     align-items: center;
     margin-top: 60px;
     width: 1180px;
     justify-content: space-between;
+    .icon-fake-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 270px;
+      background: linear-gradient(
+        135deg,
+        rgba(8, 85, 202, 1) 0%,
+        rgba(8, 85, 202, 0.7) 100%
+      );
+      box-shadow: 0px 2px 20px 0px rgba(204, 204, 204, 0.24);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 32px;
+      .icon-fake-bg-text1 {
+        margin-top: 44px;
+        font-size: 22px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        line-height: 30px;
+      }
+      .icon-fake-bg-line {
+        margin-top: 14px;
+        margin-bottom: 20px;
+        width: 34px;
+        height: 3px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+      }
+      .icon-fake-bg-text2 {
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 26px;
+      }
+    }
     .icon-item {
       position: relative;
       display: flex;
@@ -1047,7 +1112,6 @@ export default {
     flex-wrap: wrap;
     .item-one {
       width: 280px;
-      height: 500px;
       background: rgba(248, 248, 248, 1);
       border: 1px solid rgba(151, 151, 151, 1);
       margin-bottom: 20px;
@@ -1084,9 +1148,9 @@ export default {
       .item-one-bottom-all {
         padding-top: 24px;
         .item-one-bottom {
+          padding-left: 20px;
           display: flex;
           align-items: center;
-          margin: 0 auto;
           .item-one-bottom-radius {
             width: 4px;
             height: 4px;
@@ -1215,7 +1279,7 @@ export default {
         .item-two-bottom {
           display: flex;
           align-items: center;
-          margin: 0 auto;
+          padding-left: 20px;
           .item-two-bottom-radius {
             width: 4px;
             height: 4px;
@@ -1357,6 +1421,7 @@ export default {
     height: 360px;
     background: url("../../../../assets/imgs/pcpage2/p10.png") no-repeat center
       0 / cover;
+    margin-top: 60px;
     .part10-text {
       font-size: 16px;
       font-family: PingFangSC-Regular, PingFang SC;
@@ -1377,5 +1442,11 @@ export default {
       left: 872px;
     }
   }
+}
+.h500 {
+  height: 500px;
+}
+.h436 {
+  height: 436px;
 }
 </style>
