@@ -147,7 +147,7 @@ export default {
   .part1-title {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
     line-height: 50px;
     margin-bottom: 40px;
@@ -185,7 +185,7 @@ export default {
         left: 20px;
         font-size: 21px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(255, 255, 255, 1);
         z-index: 3;
       }
@@ -196,7 +196,7 @@ export default {
         left: 20px;
         width: 80px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(255, 255, 255, 1);
       }
       .part1-line-fake-bg {
@@ -248,7 +248,7 @@ export default {
   .part2-title {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
     line-height: 50px;
     margin-bottom: 40px;
@@ -286,7 +286,7 @@ export default {
         left: 20px;
         font-size: 21px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(255, 255, 255, 1);
         z-index: 3;
       }
@@ -297,7 +297,7 @@ export default {
         left: 20px;
         width: 80px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(255, 255, 255, 1);
       }
       .part2-line-fake-bg {
@@ -348,7 +348,7 @@ export default {
   .part3-title {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
     line-height: 50px;
   }
@@ -368,7 +368,7 @@ export default {
         padding-left: 20px;
         font-size: 18px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(255, 255, 255, 1);
         line-height: 38px;
         margin-bottom: 16px;

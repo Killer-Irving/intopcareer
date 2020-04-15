@@ -644,7 +644,7 @@ export default {
     border: 1px solid rgba(255, 255, 255, 1);
     font-size: 18px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(255, 255, 255, 1);
     line-height: 44px;
     text-align: center;
@@ -660,7 +660,7 @@ export default {
   .text1 {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .text2 {
@@ -688,7 +688,7 @@ export default {
         margin-top: 30px;
         font-size: 26px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(51, 51, 51, 1);
         margin-bottom: 10px;
       }
@@ -713,7 +713,7 @@ export default {
   .text1 {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .text2 {
@@ -764,7 +764,7 @@ export default {
   .text1 {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .icon-line {
@@ -795,7 +795,7 @@ export default {
         margin-top: 44px;
         font-size: 22px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(255, 255, 255, 1);
         line-height: 30px;
       }
@@ -866,7 +866,7 @@ export default {
   .text1 {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .icon-line {
@@ -917,7 +917,7 @@ export default {
   .text1 {
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .icon-line {
@@ -961,7 +961,7 @@ export default {
     margin-bottom: 14px;
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .text2 {
@@ -994,7 +994,7 @@ export default {
     margin-bottom: 14px;
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .text2 {
@@ -1095,7 +1095,7 @@ export default {
     margin-bottom: 14px;
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .text2 {
@@ -1133,7 +1133,7 @@ export default {
           margin-top: 20px;
           margin-bottom: 8px;
           font-family: PingFangSC-Medium, PingFang SC;
-          font-weight: 500;
+          font-weight: bold;
           color: rgba(51, 51, 51, 1);
         }
         .item-one-top-text {
@@ -1185,7 +1185,7 @@ export default {
         .one-bottom-line1-text {
           font-size: 26px;
           font-family: PingFangSC-Medium, PingFang SC;
-          font-weight: 500;
+          font-weight: bold;
           color: rgba(51, 51, 51, 1);
           line-height: 32px;
         }
@@ -1200,7 +1200,7 @@ export default {
             center 0 / cover;
           font-size: 18px;
           font-family: PingFangSC-Medium, PingFang SC;
-          font-weight: 500;
+          font-weight: bold;
           color: rgba(248, 248, 248, 1);
           text-align: center;
         }
@@ -1262,7 +1262,7 @@ export default {
         .item-two-top-title {
           font-size: 20px;
           font-family: PingFangSC-Medium, PingFang SC;
-          font-weight: 500;
+          font-weight: bold;
           color: rgba(51, 51, 51, 1);
         }
         .item-two-top-text {
@@ -1319,7 +1319,7 @@ export default {
       .three-item-text {
         font-size: 20px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(51, 51, 51, 1);
       }
     }
@@ -1356,7 +1356,7 @@ export default {
     margin-bottom: 14px;
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .text2 {
@@ -1385,7 +1385,7 @@ export default {
       .loop-title {
         font-size: 24px;
         font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
+        font-weight: bold;
         color: rgba(51, 51, 51, 1);
         line-height: 33px;
         margin: 20px 0 12px 0;
@@ -1412,7 +1412,7 @@ export default {
     margin-bottom: 14px;
     font-size: 36px;
     font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(51, 51, 51, 1);
   }
   .part10-bg {
